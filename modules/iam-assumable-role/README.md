@@ -9,14 +9,14 @@ Trusted resources can be any [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/U
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.6, < 0.14 |
-| aws | >= 2.23, < 4.0 |
+| terraform | >= 0.12.6 |
+| aws | >= 2.23 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | >= 2.23, < 4.0 |
+| aws | >= 2.23 |
 
 ## Inputs
 
@@ -32,6 +32,7 @@ Trusted resources can be any [IAM ARNs](https://docs.aws.amazon.com/IAM/latest/U
 | force\_detach\_policies | Whether policies should be detached from this role when destroying | `bool` | `false` | no |
 | max\_session\_duration | Maximum CLI/API session duration in seconds between 3600 and 43200 | `number` | `3600` | no |
 | mfa\_age | Max age of valid MFA (in seconds) for roles which require MFA | `number` | `86400` | no |
+| number\_of\_custom\_role\_policy\_arns | Number of IAM policies to attach to IAM role | `number` | `null` | no |
 | poweruser\_role\_policy\_arn | Policy ARN to use for poweruser role | `string` | `"arn:aws:iam::aws:policy/PowerUserAccess"` | no |
 | readonly\_role\_policy\_arn | Policy ARN to use for readonly role | `string` | `"arn:aws:iam::aws:policy/ReadOnlyAccess"` | no |
 | role\_description | IAM Role description | `string` | `""` | no |
